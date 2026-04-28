@@ -1,4 +1,4 @@
-package q01_basic.question06;
+package q01_basic.question07;
 
 import java.io.BufferedReader;
 import java.io.IOException;
