@@ -34,4 +34,7 @@ public class MemberStorage {
 		this.members = members;
 	}
 
+	public void addMember(Member newMember) {
+		this.members.add(newMember);
+	}
 }
