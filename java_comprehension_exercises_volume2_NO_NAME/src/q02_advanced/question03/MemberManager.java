@@ -17,6 +17,9 @@ class MemberManager {
         }
     }
 
+    //update Password
+    // 複数の Member クラスオブジェクトの中から引数で取得した id がフィールドの値と一致するオブジェクト
+    // のnewPassword に更新する。
     public static void updatePassword(List<Member> members, int id, String newPassword) {
         boolean found = false;
         for (Member member : members) {

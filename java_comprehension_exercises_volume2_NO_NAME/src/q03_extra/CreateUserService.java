@@ -16,6 +16,8 @@ class CreateUserService {
 	}
 
 	//execute メソッド
+	//引数で取得した id が memberStorage 内の Member クラスのリストに存在する場合は、IllegalInputException をスローする。
+	//存在しない場合は、引数で取得したインスタンスを生成し、memberStorage 内の Member クラスのリストに追加する。
 	public boolean execute(int id, String password, String name, String birthday) throws IllegalInputException {
 		for (Member member : memberStorage.getMembers()) {
 			if (member.getId() == id) {

@@ -37,12 +37,16 @@ class Member {
 //        System.out.println(name + " purchased the item at 50% off");
 //    }
 
+    //getInstance メソッドを定義する。引数で取得した id、password、name、birthdayString を使用して Member クラスオブジェクトを生成し、戻り値として返す。
     public static Member getInstance(int id, String password, String name, String birthdayString) {
+        //SimpleDateFormat を使用し、引数で取得した String 型の birthdayString を “yyyy/MM/dd” 形式の Date 型に変換する。
+        //Member クラスオブジェクトを生成し、コンストラクタを使用して id、password、name、birthday フィールドに引数で
+        //取得した値を代入する。rank フィールドには 1~3 のランダムな整数を代入する。
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         int birthday = 0;
         try {
-            birthday = Integer.parseInt(dateFormat.parse(birthdayString).toString());
+            birthday = (int) (dateFormat.parse(birthdayString).getTime() / 1000); // Date型を秒数に変換してint型にキャスト
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,6 +57,7 @@ class Member {
         Coupon coupon2 = Coupon.getInstance(2, 0.25, "今月の特典");
         member.setCoupons(List.of(coupon1, coupon2));
         return member;
+
     }
 
     @Override

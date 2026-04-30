@@ -20,6 +20,9 @@ class LoginService {
 		this.memberStorage = memberStorage;
 	}
 
+	//doLogin メソッド
+	//引数で取得した id と password が memberStorage 内の Member クラスのリストに存在する場合は、該当ユーザーを戻り値として返す。
+	//存在しない場合は、戻り値として null を返す。
 	public Member doLogin(int id, String password) {
 		for (Member member : memberStorage.getMembers()) {
 			if (member.getId() == id && member.getPassword().equals(password)) {
