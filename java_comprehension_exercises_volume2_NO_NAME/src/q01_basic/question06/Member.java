@@ -7,6 +7,7 @@ class Member extends AbstMember {
     private int age; // 会員の年齢
     private int rank; // 会員のランク
 
+    // 引数なしのコンストラクタを定義する。フィールドは適切な初期値を代入する。
     public Member() {
         this.password = null;
         this.name = null;
@@ -14,6 +15,7 @@ class Member extends AbstMember {
         this.rank = 0;
     }
 
+    // 引数ありのコンストラクタを定義する。引数で取得した値をフィールドに代入する。
     public Member(int id, String password, String name, int age, int rank) {
         this.id = id;
         this.password = password;
@@ -22,11 +24,13 @@ class Member extends AbstMember {
         this.rank = rank;
     }
 
+    // buyItem メソッドを定義する。商品を購入した際の処理を記述する。
     public void buyItem() {
         //System.out.println(name + "さんが商品を購入しました。");
         System.out.println(name + " purchased the item at 50% off");
     }
 
+    // showMember メソッドを定義する。会員の情報を表示する。
     public void showMember() {
         System.out.println("***MEMBER DATA***");
         System.out.println("id:" + id);

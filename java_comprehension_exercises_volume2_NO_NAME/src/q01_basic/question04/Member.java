@@ -8,6 +8,7 @@ class Member {
     private int age; // 会員の年齢
     private int rank; // 会員のランク
 
+    // デフォルトコンストラクタ
     public Member() {
         this.password = null;
         this.name = null;
@@ -15,6 +16,7 @@ class Member {
         this.rank = 0;
     }
 
+    // 引数を受け取るコンストラクタ
     public Member(int id, String password, String name, int age, int rank) {
         this.id = id;
         this.password = password;
@@ -23,6 +25,7 @@ class Member {
         this.rank = rank;
     }
 
+    // 会員情報を表示するメソッド
     public void showMember() {
         System.out.println("***MEMBER DATA***");
         System.out.println("id:" + id);

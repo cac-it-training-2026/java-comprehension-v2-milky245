@@ -6,18 +6,21 @@ class Member {
     private int age; // 会員の年齢
     private int rank; // 会員のランク
 
+    // デフォルトコンストラクタ
     public Member() {
         this.name = null;
         this.age = 0;
         this.rank = 0;
     }
 
+    // 引数ありコンストラクタ
     public Member(String name, int age, int rank) {
         this.name = name;
         this.age = age;
         this.rank = rank;
     }
 
+    // 会員の情報を表示するメソッド
     public void showMember() {
         System.out.println("***MEMBER DATA***");
         System.out.println("name:" + name);
@@ -26,8 +29,9 @@ class Member {
         System.out.println("*****************");
     }
 
+    // 会員のランクを1つ上げるメソッド
     public void rankUp() {
-        this.rank += 1; // ランクを1つ上げる
+        this.rank += 1;
     }
 
     // ゲッターとセッター

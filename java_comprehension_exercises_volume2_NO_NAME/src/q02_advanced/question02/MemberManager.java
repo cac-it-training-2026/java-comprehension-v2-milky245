@@ -21,6 +21,7 @@ class MemberManager {
     private MemberManager() {
     }
 
+    //MemberManager クラス：showAllMembers メソッドを定義する。引数で取得した複数の Member クラスオブジェクトを 1 件ずつ取得し、各オブジェクトの showMember メソッドを呼び出す。
     //TODO showAllMembersメソッドを実装する
     public static void showAllMembers(List<Member> members) {
         for (Member member : members) {
@@ -28,6 +29,8 @@ class MemberManager {
         }
     }
 
+    //ShowCreateUser メソッドを定義する。
+    // 引数で取得した複数の Member クラスオブジェクトの中から引数で取得した id がフィールドの値と一致するオブジェクトの showMember メソッドを呼び出し、該当会員（新規作成したユーザー）のユーザー情報を出力する。
     public static void updatePassword(List<Member> members, int id, String newPassword) {
         boolean found = false;
         for (Member member : members) {

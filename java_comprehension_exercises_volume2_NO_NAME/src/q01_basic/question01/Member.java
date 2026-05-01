@@ -7,6 +7,7 @@ class Member {
     int age; // 会員の年齢
     int rank; // 会員のランク
 
+    //会員情報を表示する
     public void showMember() {
         System.out.println("***MEMBER DATA***");
         System.out.println("name:" + name);

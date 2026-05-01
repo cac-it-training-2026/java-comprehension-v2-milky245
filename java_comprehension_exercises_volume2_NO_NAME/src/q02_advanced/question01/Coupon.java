@@ -8,6 +8,7 @@ public class Coupon {
     public Coupon() {
     }
 
+    //引数で全てのフィールドを初期化するコンストラクタ
     public Coupon(int id, double discountRate, String description) {
         this.id = id;
         this.discountRate = discountRate;
@@ -38,6 +39,7 @@ public class Coupon {
         this.description = description;
     }
 
+    // toString メソッドをオーバーライドして、クーポンの情報を文字列として返す
     @Override
     public String toString() {
         return "Coupon [" +
@@ -47,6 +49,7 @@ public class Coupon {
                 ']';
     }
 
+    // 引数で全てのフィールドを初期化する静的なファクトリーメソッド
     public static Coupon getInstance(int id, double discountRate, String description) {
         return new Coupon(id, discountRate, description);
     }

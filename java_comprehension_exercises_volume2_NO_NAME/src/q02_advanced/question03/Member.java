@@ -34,6 +34,7 @@ class Member {
 //        System.out.println(name + " purchased the item at 50% off");
 //    }
 
+    //getInstance メソッドを定義する。引数で取得した id、password、name、age を使用して Member クラスオブジェクトを生成し、戻り値として返す。
     public static Member getInstance(int id, String password, String name, int age, int rank) {
         Member member = new Member(id, password, name, age, rank);
         Coupon coupon1 = Coupon.getInstance(1, 0.5, "最初の特典");
@@ -55,6 +56,7 @@ class Member {
                 ']';
     }
 
+    // showMember メソッドを定義する。会員の情報を表示する。
     public void showMember() {
         //System.out.println("***MEMBER DATA***");
         System.out.println(toString());

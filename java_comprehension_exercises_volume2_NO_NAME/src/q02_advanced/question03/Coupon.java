@@ -47,6 +47,7 @@ public class Coupon {
                 ']';
     }
 
+    // getInstance メソッドを定義する。引数で取得した id、discountRate、description を使用して Coupon クラスオブジェクトを生成し、戻り値として返す。
     public static Coupon getInstance(int id, double discountRate, String description) {
         return new Coupon(id, discountRate, description);
     }
