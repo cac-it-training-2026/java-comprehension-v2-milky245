@@ -1,4 +1,7 @@
 package q03_extra;
+/**
+ * 会員情報を管理するクラス
+ */
 
 import java.util.ArrayList;
 import java.util.List;

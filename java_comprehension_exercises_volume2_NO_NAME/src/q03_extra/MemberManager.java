@@ -1,5 +1,8 @@
 package q03_extra;
-
+/**
+ * 会員管理クラス
+ * 会員の情報を表示するメソッドを持つ。
+ */
 import java.util.List;
 
 class MemberManager {
@@ -17,6 +20,11 @@ class MemberManager {
         }
     }
 
+    /**
+     * 会員のパスワードを更新するメソッド
+     * idが一致する会員のパスワードをnewPasswordに更新します。
+     * 一致する会員がいない場合は「該当者はいませんでした。」と表示します。
+     */
     public static void updatePassword(List<Member> members, int id, String newPassword) {
         boolean found = false;
         for (Member member : members) {
@@ -32,9 +40,11 @@ class MemberManager {
         }
     }
 
-    //MemberManager クラス：ShowCreateUser メソッドを定義する。引数で取得した複数の Member クラスオブジェクトの中か
-    //ら引数で取得した id がフィールドの値と一致するオブジェクトの showMember メソッドを呼び出し、該当会員（新規作成し
-    //たユーザー）のユーザー情報を出力する。
+    /**
+     * 会員の情報を表示するメソッド
+     * idが一致する会員の情報を表示します。
+     * 一致する会員がいない場合は「該当者はいませんでした。」と表示します。
+     */
     public static void showCreateUser(List<Member> members, int id) {
         for (Member member : members) {
             if (member.getId() == id) { // id一致する会員を探す

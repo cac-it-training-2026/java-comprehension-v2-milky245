@@ -5,10 +5,7 @@ import java.io.IOException;
 
 /**
  * 標準入力を制御するクラス
- * 7 ConsoleReader クラス：inputString メソッド内で、コンソール上の入力値を取得し、戻り値として返す。IOException を
- * throws 宣言する。なお BufferedReader を用いること。
- * 8 ConsoleReader クラス：inputNumber メソッド内で、コンソール上の入力値を取得し、int 型に変換して戻り値として返す。
- * IOException, NumberFormatException を throws 宣言する。なお BufferedReader を用いること。
+ IOException, NumberFormatException を throws 宣言する。なお BufferedReader を用いること。
  */
 class ConsoleReader {
 

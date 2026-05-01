@@ -1,5 +1,9 @@
 package q02_advanced.question02;
-
+/**
+ * クーポンを表すクラス
+ * クーポンのID、割引率、説明をフィールドとして持ち、クーポンの情報を表示するメソッドを持つ。
+ * クーポンのインスタンスを生成するためのファクトリーメソッドも実装する。
+ */
 public class Coupon {
     private int id;
     private double discountRate;
@@ -7,7 +11,11 @@ public class Coupon {
 
     public Coupon() {
     }
-
+/**    引数ありのコンストラクタを定義する。引数で取得した値をフィールドに代入する。
+     * @param id クーポンID
+     * @param discountRate 割引率
+     * @param description クーポンの説明
+     */
     public Coupon(int id, double discountRate, String description) {
         this.id = id;
         this.discountRate = discountRate;
@@ -38,6 +46,8 @@ public class Coupon {
         this.description = description;
     }
 
+    /** クーポンの情報を表示するメソッド
+     */
     @Override
     public String toString() {
         return "Coupon [" +
@@ -47,6 +57,12 @@ public class Coupon {
                 ']';
     }
 
+    /** クーポンのインスタンスを生成するためのファクトリーメソッド
+     * @param id クーポンID
+     * @param discountRate 割引率
+     * @param description クーポンの説明
+     * @return クーポンのインスタンス
+     */
     public static Coupon getInstance(int id, double discountRate, String description) {
         return new Coupon(id, discountRate, description);
     }

@@ -1,5 +1,8 @@
 package q01_basic.question05;
-
+/**
+ * 会員管理クラス
+ * 会員の情報を表示するメソッドを持つ。
+ */
 class MemberManager {
 
 	/**

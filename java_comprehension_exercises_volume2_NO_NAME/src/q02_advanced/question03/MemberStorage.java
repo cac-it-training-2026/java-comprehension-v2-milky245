@@ -1,5 +1,10 @@
 package q02_advanced.question03;
-
+/**
+ * 会員ストレージクラス
+ * 会員の情報を格納するクラス。
+ * 会員の情報は、会員ID、パスワード、名前、年齢、ランクの5つのフィールドを持つ。
+ * 会員の情報は、コンストラクタで初期化される。
+ */
 import java.util.ArrayList;
 import java.util.List;
 

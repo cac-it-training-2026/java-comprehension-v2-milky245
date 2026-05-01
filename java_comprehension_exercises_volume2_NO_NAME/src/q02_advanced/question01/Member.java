@@ -1,8 +1,17 @@
 package q02_advanced.question01;
-
+/**
+ * 会員クラス
+ * 会員のID、パスワード、名前、年齢、ランクをフィールドとして持ち、会員の情報を表示するメソッドを持つ。
+ * クーポンのリストもフィールドとして持ち、クーポンの情報も表示する。
+ */
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 会員クラス
+ * 会員のID、パスワード、名前、年齢、ランクをフィールドとして持ち、会員の情報を表示するメソッドを持つ。
+ * クーポンのリストもフィールドとして持ち、クーポンの情報も表示する。
+ */
 class Member {
     //TODO ここから実装する
     private int id; // 会員ID
@@ -45,6 +54,9 @@ class Member {
 //        return member;
 //    }
 
+    /**
+     * 会員の情報を表示する。
+     */
     @Override
     public String toString() {
         return "Member[" +
@@ -57,6 +69,9 @@ class Member {
                 ']';
     }
 
+    /**
+     * 会員の情報を表示するメソッド
+     */
     public void showMember() {
         //System.out.println("***MEMBER DATA***");
         System.out.println(toString());

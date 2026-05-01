@@ -1,5 +1,8 @@
 package q02_advanced.question01;
-
+/**
+ * クーポンを表すクラス
+ * クーポンのID、割引率、説明をフィールドとして持ち、クーポンの情報を表示するメソッドを持つ。
+ */
 public class Coupon {
     private int id;
     private double discountRate;
@@ -8,7 +11,9 @@ public class Coupon {
     public Coupon() {
     }
 
-    //引数で全てのフィールドを初期化するコンストラクタ
+    /**
+     * 引数ありのコンストラクタを定義する。引数で取得した値をフィールドに代入する。
+     */
     public Coupon(int id, double discountRate, String description) {
         this.id = id;
         this.discountRate = discountRate;
@@ -39,7 +44,9 @@ public class Coupon {
         this.description = description;
     }
 
-    // toString メソッドをオーバーライドして、クーポンの情報を文字列として返す
+    /**
+     * クーポンの情報を表示するメソッド
+     */
     @Override
     public String toString() {
         return "Coupon [" +
@@ -49,7 +56,9 @@ public class Coupon {
                 ']';
     }
 
-    // 引数で全てのフィールドを初期化する静的なファクトリーメソッド
+    /**
+     * getInstance メソッドを定義する。引数で取得した id、discountRate、description を使用して Coupon クラスオブジェクトを生成し、戻り値として返す。
+     */
     public static Coupon getInstance(int id, double discountRate, String description) {
         return new Coupon(id, discountRate, description);
     }

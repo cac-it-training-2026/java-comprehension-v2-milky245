@@ -1,5 +1,7 @@
 package q03_extra;
-
+/**
+* クーポンを表すクラス
+* **/
 public class Coupon {
     private int id;
     private double discountRate;
@@ -38,6 +40,9 @@ public class Coupon {
         this.description = description;
     }
 
+    /**
+     * クーポンの情報を表示するメソッド
+     */
     @Override
     public String toString() {
         return "Coupon [" +
@@ -47,6 +52,13 @@ public class Coupon {
                 ']';
     }
 
+    /**
+     * クーポンのインスタンスを生成するファクトリーメソッド
+     * @param id クーポンID
+     * @param discountRate 割引率
+     * @param description 説明
+     * @return Couponのインスタンス
+     */
     public static Coupon getInstance(int id, double discountRate, String description) {
         return new Coupon(id, discountRate, description);
     }

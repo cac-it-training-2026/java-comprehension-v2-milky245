@@ -1,10 +1,9 @@
 package q03_extra;
 
-//18 MemberIdReader クラス：setErrorMsg メソッドをオーバーライドする。エラーメッセージ「1-9 の整数を入力してくださ
-//い」を戻り値として返す。
-//19 MemberIdReader クラス：isValid メソッドをオーバーライドする。引数で取得した inputString が指定の形式（1～9 のいずれ
-//か 1 文字）と一致する場合は、戻り値として true、一致しない場合は false を返す。
-//20 MemberIdReader クラス：isParseInt メソッドをオーバーライドし、戻り値として true を返す。
+/**
+ * 会員IDを読み取るクラス
+ * 1-9の整数を入力することを想定している
+ */
 public class MemberIdReader implements IConsoleReader {
     @Override
     public String setErrorMsg() {

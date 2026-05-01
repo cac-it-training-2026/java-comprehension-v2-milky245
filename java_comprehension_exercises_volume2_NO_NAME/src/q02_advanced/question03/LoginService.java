@@ -2,11 +2,6 @@ package q02_advanced.question03;
 
 /**
  * MemberStorageにアクセスし、ログイン処理を行う
- * 15 LoginService クラス：コンストラクタを定義し、引数で取得した memberStorage をフィールドに代入する。
- * 16 LoginService クラス：doLogin メソッドを定義し、以下の内容を記述する。
- * 16.1 memberStorage フィールドに代入された会員情報の中から引数で取得した id と password がフィールドの値と一致する
- * ユーザーを取得し、戻り値として返す。
- * 16.2 一致するユーザーが存在しない場合は戻り値として null を返す。
  */
 class LoginService {
 
@@ -20,9 +15,12 @@ class LoginService {
 		this.memberStorage = memberStorage;
 	}
 
-	//doLogin メソッド
-	//引数で取得した id と password が memberStorage 内の Member クラスのリストに存在する場合は、該当ユーザーを戻り値として返す。
-	//存在しない場合は、戻り値として null を返す。
+	/**
+	 * ログイン処理を行う
+	 * @param id 会員ID
+	 * @param password パスワード
+	 * @return ログイン成功した場合はMemberクラスのインスタンス、失敗した場合はnullを返す
+	 */
 	public Member doLogin(int id, String password) {
 		for (Member member : memberStorage.getMembers()) {
 			if (member.getId() == id && member.getPassword().equals(password)) {

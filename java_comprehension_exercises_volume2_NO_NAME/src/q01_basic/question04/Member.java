@@ -1,5 +1,8 @@
 package q01_basic.question04;
-
+/**
+ * 会員クラス
+ * 会員の名前、年齢、ランクをフィールドとして持ち、会員の情報を表示するメソッドを持つ。
+ */
 class Member {
     //TODO ここから実装する
     private int id; // 会員ID
@@ -8,7 +11,9 @@ class Member {
     private int age; // 会員の年齢
     private int rank; // 会員のランク
 
-    // デフォルトコンストラクタ
+    /**
+     * 会員の情報を初期化する
+     */
     public Member() {
         this.password = null;
         this.name = null;
@@ -16,7 +21,14 @@ class Member {
         this.rank = 0;
     }
 
-    // 引数を受け取るコンストラクタ
+    /**
+    * 会員の情報を初期化する
+    * @param id 会員ID
+    * @param password パスワード
+    * @param name 会員の名前
+    * @param age 会員の年齢
+    * @param rank 会員のランク
+    */
     public Member(int id, String password, String name, int age, int rank) {
         this.id = id;
         this.password = password;
@@ -25,7 +37,9 @@ class Member {
         this.rank = rank;
     }
 
-    // 会員情報を表示するメソッド
+        /**
+        * 会員の情報を表示するメソッド
+        */
     public void showMember() {
         System.out.println("***MEMBER DATA***");
         System.out.println("id:" + id);

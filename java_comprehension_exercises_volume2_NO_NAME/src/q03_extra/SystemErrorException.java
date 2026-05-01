@@ -1,5 +1,7 @@
 package q03_extra;
-
+/** * SystemErrorException クラス：下記クラス構成、クラス図を参照しコンストラクタを定義する。コンストラクタ内の処理で親
+ * クラス（Exception）のコンストラクタを呼び出す。
+ */
 public class SystemErrorException extends Exception {
     //SystemErrorException クラス：下記クラス構成、クラス図を参照しコンストラクタを定義する。コンストラクタ内の処理で親
     //クラス（Exception）のコンストラクタを呼び出す。

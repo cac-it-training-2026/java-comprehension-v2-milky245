@@ -1,5 +1,9 @@
 package q02_advanced.question03;
 
+/**
+ * 会員管理クラス
+ * 会員の情報を表示するメソッドを持つ。
+ */
 import java.util.List;
 
 class MemberManager {
@@ -17,9 +21,12 @@ class MemberManager {
         }
     }
 
-    //update Password
-    // 複数の Member クラスオブジェクトの中から引数で取得した id がフィールドの値と一致するオブジェクト
-    // のnewPassword に更新する。
+    /**
+     * パスワードを更新するメソッド
+     * @param members 会員のリスト
+     * @param id 更新したい会員のID
+     * @param newPassword 新しいパスワード
+     */
     public static void updatePassword(List<Member> members, int id, String newPassword) {
         boolean found = false;
         for (Member member : members) {

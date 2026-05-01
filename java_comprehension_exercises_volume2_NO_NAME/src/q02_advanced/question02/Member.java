@@ -1,5 +1,10 @@
 package q02_advanced.question02;
 
+/**
+ * 会員クラス
+ * 会員のID、パスワード、名前、年齢、ランクをフィールドとして持ち、会員の情報を表示するメソッドを持つ。
+ * クーポンのリストもフィールドとして持ち、クーポンの情報も表示する。
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +18,9 @@ class Member {
 
     private List<Coupon> coupons; // クーポンのリスト
 
-    // 引数なしのコンストラクタを定義する。フィールドは適切な初期値を代入する。
+    /**
+     * 引数なしのコンストラクタを定義する。フィールドは適切な初期値を代入する。
+     */
     public Member() {
         this.password = null;
         this.name = null;
@@ -21,7 +28,9 @@ class Member {
         this.rank = 0;
     }
 
-    // 引数ありのコンストラクタを定義する。引数で取得した値をフィールドに代入する。
+    /**
+     * 引数ありのコンストラクタを定義する。引数で取得した値をフィールドに代入する。
+     */
     public Member(int id, String password, String name, int age, int rank) {
         this.id = id;
         this.password = password;
@@ -36,7 +45,15 @@ class Member {
 //        System.out.println(name + " purchased the item at 50% off");
 //    }
 
-    //getInstance メソッドを定義する。引数で取得した id、password、name、age を使用して Member クラスオブジェクトを生成し、戻り値として返す。
+    /**
+     * getInstance メソッドを定義する。引数で取得した id、password、name、age を使用して Member クラスオブジェクトを生成し、戻り値として返す。
+     * @param id
+     * @param password
+     * @param name
+     * @param age
+     * @param rank
+     * @return
+     */
     public static Member getInstance(int id, String password, String name, int age, int rank) {
         Member member = new Member(id, password, name, age, rank);
         Coupon coupon1 = Coupon.getInstance(1, 0.5, "最初の特典");
@@ -46,7 +63,9 @@ class Member {
         return member;
     }
 
-    // toString メソッドをオーバーライドする。Member クラスオブジェクトのフィールドの値を文字列として返す。
+    /**
+     * toString メソッドをオーバーライドする。会員の情報を文字列として返す。
+     */
     @Override
     public String toString() {
         return "Member[" +
@@ -59,7 +78,9 @@ class Member {
                 ']';
     }
 
-    // showMember メソッドを定義する。会員の情報を表示する。
+    /**
+     * showMember メソッドを定義する。会員の情報を表示する。
+     */
     public void showMember() {
         //System.out.println("***MEMBER DATA***");
         System.out.println(toString());

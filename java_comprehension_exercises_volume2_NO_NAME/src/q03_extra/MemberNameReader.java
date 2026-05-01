@@ -1,9 +1,8 @@
 package q03_extra;
-//24 MemberNameReader クラス：setErrorMsg メソッドをオーバーライドする。エラーメッセージ「名前は半角英字 16 文字以内
-//で入力してください」を戻り値として返す。
-//25 MemberNameReader クラス：isValid メソッドをオーバーライドする。引数で取得した inputString が指定の形式（1～16 文
-//字の半角英字またはスペース）と一致する場合は、戻り値として true、一致しない場合は false を返す。
-//26 MemberNameReader クラス：isParseInt メソッドをオーバーライドし、戻り値として false を返す。
+/**
+ * 会員名の入力を受け付けるクラス
+ * IConsoleReaderインターフェースを実装する
+ */
 public class MemberNameReader implements IConsoleReader {
     @Override
     public String setErrorMsg() {
