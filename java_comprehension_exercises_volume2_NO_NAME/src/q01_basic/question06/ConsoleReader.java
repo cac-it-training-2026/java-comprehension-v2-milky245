@@ -1,10 +1,12 @@
 package q01_basic.question06;
-
-import java.io.IOException;
-
 /**
  * 標準入力を制御するクラス
+ * IOException, NumberFormatException を throws 宣言する。なお BufferedReader を用いること。
  */
+import java.io.BufferedReader;
+import java.io.IOException;
+
+
 class ConsoleReader {
 
 	/**
@@ -15,8 +17,8 @@ class ConsoleReader {
 	 */
 	public String inputString() throws IOException {
 		//TODO ここから実装する
-
-		return "";
+		BufferedReader reader = new BufferedReader(new java.io.InputStreamReader(System.in));
+        return reader.readLine();
 	}
 
 	/**
@@ -28,9 +30,9 @@ class ConsoleReader {
 	 */
 	public int inputNumber() throws IOException, NumberFormatException {
 		//TODO ここから実装する
-
-		return 0;
-
+		BufferedReader reader = new BufferedReader(new java.io.InputStreamReader(System.in));
+		String input = reader.readLine();
+		return Integer.parseInt(input);
 	}
 
 }
