@@ -90,7 +90,15 @@ public class SystemMain {
 				if (isCreated) {
 					System.out.println("ユーザが作成されました");
 					System.out.println("ユーザ情報を表示します。");
-					memberStorage.getMembers().getLast().showMember();
+					//memberStorage.getMembers().getLast().showMember();
+
+					Member lastMember = null;
+					for (Member member : memberStorage.getMembers()) {
+						lastMember = member;
+					}
+					if (lastMember != null) {
+						lastMember.showMember();
+					}
 				}
 			} catch (IllegalInputException e) {
 				System.out.println(e.getMessage());
